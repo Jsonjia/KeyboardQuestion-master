@@ -1,13 +1,13 @@
-package com.zjp.keyboard;
+package com.zjp.keyboard.ui;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
+import com.zjp.keyboard.R;
 import com.zjp.keyboard.databinding.ActivityMainBinding;
-import com.zjp.keyboard.model.Case1Model;
-import com.zjp.keyboard.model.Case2Model;
-import com.zjp.keyboard.model.TitleModel;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,13 +18,17 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityMainBinding bind = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        TitleModel titleModel = new TitleModel();
-        titleModel.setTitle("解决横屏情况下，软键盘弹出导致整体布局上移问题");
-
-        bind.setTitle(titleModel);
-
-        bind.setCase1(new Case1Model());
-        bind.setCase2(new Case2Model());
-
+        bind.setCase1(this);
+        bind.setCase2(this);
     }
+
+    public void case1Click(View view) {
+        view.getContext().startActivity(new Intent(view.getContext(), Case1Activity.class));
+    }
+
+    public void case2Click(View view) {
+        view.getContext().startActivity(new Intent(view.getContext(), Case2Activity.class));
+    }
+
+
 }

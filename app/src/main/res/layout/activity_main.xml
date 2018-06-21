@@ -5,16 +5,12 @@
     <data>
 
         <variable
-            name="title"
-            type="com.zjp.keyboard.model.TitleModel" />
-
-        <variable
             name="case1"
-            type="com.zjp.keyboard.model.Case1Model" />
+            type="com.zjp.keyboard.ui.MainActivity" />
 
         <variable
             name="case2"
-            type="com.zjp.keyboard.model.Case2Model" />
+            type="com.zjp.keyboard.ui.MainActivity" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -27,7 +23,7 @@
             android:layout_height="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="@{title.title}"
+            android:text="@{@string/desc}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

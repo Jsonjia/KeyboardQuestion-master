@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_outside_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_button_edit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true">
+
+            <EditText
+                android:id="@+id/edit_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="18dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_white_border_r20"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:hint="和大家说些什么"
+                android:imeOptions="flagNoExtractUi|actionSend"
+                android:inputType="text"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@drawable/shape_cursor"
+                android:textSize="14sp" />
+
+
+            <Button
+                android:id="@+id/btn_sendChat"
+                android:layout_width="60dp"
+                android:layout_height="30dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_button_r20"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

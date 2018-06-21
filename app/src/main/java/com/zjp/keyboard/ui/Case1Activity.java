@@ -1,4 +1,4 @@
-package com.zjp.keyboard;
+package com.zjp.keyboard.ui;
 
 import android.databinding.DataBindingUtil;
 import android.net.Uri;
@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.zjp.keyboard.R;
 import com.zjp.keyboard.databinding.ActivityCase1Binding;
 
 /**

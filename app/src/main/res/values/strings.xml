@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">KeyboardQuestion</string>
+
+    <string name="desc">解决横屏情况下，软键盘弹出导致整体布局上移问题</string>
 </resources>
