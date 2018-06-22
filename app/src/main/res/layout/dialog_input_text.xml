@@ -16,14 +16,12 @@
 
             <EditText
                 android:id="@+id/edit_chat"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="30dip"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="18dp"
                 android:layout_weight="1"
-                android:background="@drawable/background_white_border_r20"
-                android:cursorVisible="true"
                 android:gravity="center_vertical"
                 android:hint="和大家说些什么"
                 android:imeOptions="flagNoExtractUi|actionSend"
@@ -32,8 +30,6 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="4dp"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textCursorDrawable="@drawable/shape_cursor"
                 android:textSize="14sp" />
 
 

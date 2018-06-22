@@ -1,51 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+
+        <variable
+            name="click2"
+            type="com.zjp.keyboard.ui.Case2Activity" />
+    </data>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#0099cc">
-
-        <!-- The primary full-screen view. This can be replaced with whatever view
-             is needed to present your content, e.g. VideoView, SurfaceView,
-             TextureView, etc. -->
-
 
         <VideoView
             android:id="@+id/fullscreen_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:background="#55ff00ff"
-            android:fitsSystemWindows="true" />
+            android:background="#55ff00ff" />
 
-        <!-- This FrameLayout insets its children based on system windows using
-             android:fitsSystemWindows. -->
-
-        <RelativeLayout
+        <TextView
+            android:id="@+id/send_edt"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_white_border_r20"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:minHeight="38dp"
+            android:onClick="@{click2::onClick}"
+            android:padding="5dp"
+            android:text="说点什么"
+            android:textColor="@color/white"
+            android:textColorHint="#b4b4b4"
+            android:textSize="13sp"
+            android:visibility="visible" />
 
-            <EditText
-                android:id="@+id/send_edt"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_alignParentBottom="true"
-                android:gravity="center_vertical|left"
-                android:imeOptions="actionSend|flagNoExtractUi"
-                android:lines="1"
-                android:minHeight="38dp"
-                android:padding="5dp"
-                android:textColor="#222222"
-                android:textColorHint="#b4b4b4"
-                android:textSize="13sp"
-                android:visibility="visible" />
-
-            <ScrollView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_above="@id/send_edt" />
-        </RelativeLayout>
     </FrameLayout>
 
 </layout>

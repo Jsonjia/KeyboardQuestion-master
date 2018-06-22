@@ -17,17 +17,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         ActivityMainBinding bind = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
         bind.setCase1(this);
         bind.setCase2(this);
     }
 
     public void case1Click(View view) {
-        view.getContext().startActivity(new Intent(view.getContext(), Case1Activity.class));
+        startActivity(new Intent(view.getContext(), Case1Activity.class));
     }
 
     public void case2Click(View view) {
-        view.getContext().startActivity(new Intent(view.getContext(), Case2Activity.class));
+        startActivity(new Intent(view.getContext(), Case2Activity.class));
     }
 
 

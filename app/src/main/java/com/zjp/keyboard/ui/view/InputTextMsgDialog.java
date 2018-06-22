@@ -4,14 +4,12 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
-import android.support.annotation.NonNull;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -109,10 +107,13 @@ public class InputTextMsgDialog extends Dialog {
                 getWindow().getDecorView().getWindowVisibleDisplayFrame(r);
                 //获取屏幕的高度
                 int screenHeight = getWindow().getDecorView().getRootView().getHeight();
-                //此处就是用来获取键盘的高度的， 在键盘没有弹出的时候 此高度为0 键盘弹出的时候为一个正数
+                Log.d("zjp", "screenHeight=" + screenHeight);
+                //此处就是用来获取键盘的高度的，在该场景下其实就是键盘高度。
                 int heightDifference = screenHeight - r.bottom;
 
-                if (heightDifference <= 0 && mLastDiff > 0) {
+                Log.d("zjp", "r.bottom=" + r.bottom + "heightDifference=" + heightDifference);
+
+                if (heightDifference <= 0 && mLastDiff > 0) {  ////当heightDifference 为负值，说明需要关闭软键盘
                     //imm.hideSoftInputFromWindow(messageTextView.getWindowToken(), 0);
                     dismiss();
                 }
